@@ -1,0 +1,13 @@
+input{
+    margin-bottom: 20px;
+    width:70%;
+    border:1px solid blue;
+    border-radius: 5px;
+}
+select{
+    margin-bottom: 20px;
+    width:70%;
+    border:1px solid blue;
+    border-radius: 5px;
+
+}
