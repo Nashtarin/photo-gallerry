@@ -20,14 +20,14 @@ const Header = () => {
                                 navbarScroll
                             >
                                 <Nav.Link ><Link className="ms-5"to='/home'>Home</Link></Nav.Link>
-                        { user?.email && <Nav.Link ><Link to='/photogallery'>Photogallery</Link></Nav.Link>}
+                        { user?.email && <Nav.Link ><Link to='/photogallery'>My Photogallery</Link></Nav.Link>}
                                
                  
                                
 
 
-                                {user.email ? <div><span>{user.displayName}  </span><button onClick={logout} style={{backgroundColor:"green",marginLeft:'900px'}}className=' text-white fw-bold'>Logout</button></div> :
-                                    <Link to='/login'><button  style={{backgroundColor:'purple',marginLeft:'900px'}}>Login</button></Link>}
+                                {user.email ? <div><span>{user.displayName}  </span><button onClick={logout} style={{backgroundColor:"green",marginLeft:'auto'}}className=' text-white fw-bold'>Logout</button></div> :
+                                    <Link to='/login'><button  style={{backgroundColor:'purple',marginLeft:'auto'}}>Login</button></Link>}
 
                             </Nav>
 
