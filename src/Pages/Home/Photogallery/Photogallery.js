@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { initializeApp } from 'firebase/app';
-import { getDatabase, onValue, ref,set } from "firebase/database"
-import firebaseConfig from '../../../Firebase/FirebaseConfig';
+
+
 
 const Photogallery = () => {
-    const app = initializeApp(firebaseConfig);
-    // const db = getFirestore(app);
-    const db = getDatabase();
+
 
 
 
@@ -36,12 +32,7 @@ const Photogallery = () => {
     const photoSubmitHandler=(e)=>{
         e.preventDefault()
         
-function writeUserData(userId, name, email, imageUrl) {
-    const db = getDatabase();
-    set(ref(db, 'photos/' + userId), {
-     formData
-    });
-  }
+
 
         console.log(formData)
 
