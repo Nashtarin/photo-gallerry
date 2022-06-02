@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "photo-gallery-a797b"
-  }
+    "default": "galleryofphotos-f26ce",
+    "galleryofphotos-f26ce ": "galleryofphotos-f26ce"
+  },
+  "targets": {}
 }

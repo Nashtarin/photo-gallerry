@@ -26,7 +26,7 @@ const Header = () => {
                                
 
 
-                                {user.email ? <div><span>{user.displayName}  </span><button onClick={logout} style={{backgroundColor:"green",marginLeft:'auto'}}className=' text-white fw-bold'>Logout</button></div> :
+                                {user.email ? <div><span>My Name:{user.displayName}  </span><button onClick={logout} style={{backgroundColor:"green",marginLeft:'auto'}}className=' text-white fw-bold'>Logout</button></div> :
                                     <Link to='/login'><button  style={{backgroundColor:'purple',marginLeft:'auto'}}>Login</button></Link>}
 
                             </Nav>

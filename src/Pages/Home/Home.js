@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import './Home.css'
+import Photo from './Photogallery/Photo';
 
 
 const Home = () => {
-    const photourl=['https://i.ibb.co/ZgD4myp/527994-352307114849564-254785908-n.jpg','https://i.ibb.co/ZWk2sT0/30020217-1817320561665411-1615468257-n.jpg','https://i.ibb.co/xGQYcs9/37421192-2244757525536418-416900264830697472-n.jpg']
+  const[photos,setPhotos]=useState([])
+  const[loading,setLoading]=useState(true)
+  useEffect(()=>{
+    fetch('https://still-hamlet-57554.herokuapp.com/photos')
+    .then(res=>res.json())
+    .then(data=>{setPhotos(data)
+    setLoading(false)})
+  },[])
     return (
-        <div className='d-flex'>
-      {photourl.map(photo=><li style={{listStyleType:'none'}}><img style={{width:'250px',height:'150px',marginRight:'10px'}}src={photo} alt=""  /></li>)}
+        <div className="row row-cols-1 row-cols-md-3 g-1">
+           {loading &&   <Spinner className="mx-auto"animation="border" variant="success" />}
+          {photos.map(p=><Photo key={p._id} photo={p}></Photo>)}
+     
         </div>
     );
 };
