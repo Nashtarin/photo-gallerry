@@ -17,7 +17,7 @@ const Photogallery = () => {
       .then(res=>res.json())
       .then(data=>{setPhotos(data)
       setLoading(false)})
-    },[])
+    },[photos])
     const myPhotos=photos.filter(p=>user.email===p.email)
     
     const photoSubmitHandler=e=>{
