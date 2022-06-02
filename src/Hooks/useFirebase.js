@@ -77,7 +77,8 @@ const useFirebase=()=>{
         user,
         userSignUp,
         logout,
-        loginUser
+        loginUser,
+        authError
 
 
     }

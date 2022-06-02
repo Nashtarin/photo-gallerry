@@ -61,7 +61,8 @@ const SignUp = () => {
       </form>
       {isLoading && <Spinner animation="border" variant="primary" />}
                         {/* {user?.email && <Alert variant="success">Sign successfully!</Alert>} */}
-                        {authError && <span classNAme="danger">{authError}</span>}
+                        {authError && <span className="text-danger">{authError}</span>}
+                       <br/>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/login">
